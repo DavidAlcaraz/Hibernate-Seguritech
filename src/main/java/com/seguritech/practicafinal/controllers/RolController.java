@@ -5,7 +5,6 @@ import com.seguritech.practicafinal.service.RolService;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RolController {
 
-    @Autowired
-    private RolService rolService;
+    private final RolService rolService;
 
+    public RolController(RolService rolService) {
+        this.rolService = rolService;
+    }
+    
     @GetMapping(value = "/rol")
     public List<Rol> listAll() {
         List<Rol> roles = rolService.findAll();
@@ -55,7 +57,6 @@ public class RolController {
         rolService.save(rol);
         return ResponseEntity.created(new URI("/rol/" + rol.getId())).body(rol);
     }
-    
     
     @PutMapping("/rol")
     public ResponseEntity<Rol> update(@RequestBody Rol rol) throws Exception {
