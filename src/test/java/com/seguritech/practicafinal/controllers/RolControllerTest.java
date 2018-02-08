@@ -2,7 +2,8 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ *//*
+
 package com.seguritech.practicafinal.controllers;
 
 import com.seguritech.practicafinal.domain.Rol;
@@ -25,10 +26,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+*/
 /**
  *
  * @author Werner
- */
+ *//*
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RolControllerTest {
@@ -140,3 +143,4 @@ public class RolControllerTest {
 //        fail("The test case is a prototype.");
 //    }
 }
+*/
