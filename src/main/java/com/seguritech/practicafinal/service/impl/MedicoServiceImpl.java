@@ -31,17 +31,17 @@ public class MedicoServiceImpl implements MedicoService
     }
 
     @Override
-    public List<Medico> findByDescripcion(String descripcion) {
-        return medicoRepository.findByDescripcion(descripcion);
+    public List<Medico> findByNombre(String nombre) {
+        return medicoRepository.findByNombre(nombre);
     }
 
     @Override
     public void save(Medico medico) {
-
+        medicoRepository.save(medico);
     }
 
     @Override
     public void delete(Long id) {
-
+        medicoRepository.delete(id);
     }
 }

@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface MedicoRepository extends JpaRepository<Medico, Long>
 {
-    List<Medico> findByDescripcion (String descripcion);
+    List<Medico> findByNombre (String nombre);
+
 }

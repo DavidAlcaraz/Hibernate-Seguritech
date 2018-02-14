@@ -10,7 +10,7 @@ public interface MedicoService
 
     Medico findOne(Long id);
 
-    List<Medico> findByDescripcion(String descripcion);
+    List<Medico> findByNombre(String nombre);
 
     void save(Medico medico);
 
